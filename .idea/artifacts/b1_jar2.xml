@@ -2,7 +2,7 @@
   <artifact type="jar" name="b1:jar2">
     <output-path>$PROJECT_DIR$/out/artifacts/b1_jar2</output-path>
     <root id="archive" name="b1.jar">
-      <element id="module-output" name="b1" />
+      <element id="module-output" name="BankProject" />
       <element id="extracted-dir" path="$USER_HOME$/OneDrive/Documents/mysql-connector-j-8.0.31.jar" path-in-jar="/" />
     </root>
   </artifact>

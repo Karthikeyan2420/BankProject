@@ -91,12 +91,12 @@ public class CustomerPage extends JDialog {
             }
         });
 
-
+        int finalAccno = accno;
         CREDITDEBITEButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    new CreditandDebit(null,a);
+                    new CreditandDebit(null,finalAccno);
                     //setVisible(false);
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
@@ -104,12 +104,13 @@ public class CustomerPage extends JDialog {
             }
         });
 
+
         TRANSACTIONHISTORYButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    System.out.println(accno);
-                    new Transaction(null,accno);
+                    System.out.println(finalAccno);
+                    new Transaction(null, finalAccno);
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 }
